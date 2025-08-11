@@ -5,11 +5,9 @@ const selection = (arr) => {
     let min_index = i;
     for (let j = i + 1; j < arr.length; j++)
       if (arr[min_index] > arr[j]) min_index = j;
-    if (arr[min_index] < arr[i]) {
-      let temp = arr[i];
-      arr[i] = arr[min_index];
-      arr[min_index] = temp;
-    }
+    let temp = arr[i];
+    arr[i] = arr[min_index];
+    arr[min_index] = temp;
   }
 };
 
