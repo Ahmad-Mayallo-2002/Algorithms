@@ -1,3 +1,4 @@
+// Naive Approach
 function quickSort(arr) {
   if (arr.length <= 1) return arr;
   let pivot = arr[arr.length - 1];
@@ -7,7 +8,5 @@ function quickSort(arr) {
     arr[i] < pivot ? left.push(arr[i]) : right.push(arr[i]);
   return [...quickSort(left), pivot, ...quickSort(right)];
 }
-
 const arr = [10, 7, 8, 9, 1, 5];
-
 console.log(quickSort(arr));
